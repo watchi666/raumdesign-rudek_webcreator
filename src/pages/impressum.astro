@@ -1,0 +1,7 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+---
+<BaseLayout title="Impressum" description="Impressum von RaumDesign Rudek.">
+  <section class="legal"><h1>Impressum</h1><h2>Verantwortlich</h2><p>Herr Daniel Rudek<br/>Kirchstraße 37<br/>40227 Düsseldorf</p><h2>Kontakt</h2><p>Telefon: <a href={site.phoneHref}>{site.phone}</a><br/>E-Mail: <a href={site.emailHref}>{site.email}</a></p><h2>Umsatzsteuer-ID</h2><p>Umsatzsteuer-Identifikationsnummer: DE 299/487/192</p><h2>Handwerkskammer</h2><p>Mitglied der Handwerkskammer Düsseldorf<br/>Georg-Schulhoff-Platz 1, 40221 Düsseldorf</p></section>
+</BaseLayout>

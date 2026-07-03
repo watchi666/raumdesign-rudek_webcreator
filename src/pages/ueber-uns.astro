@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import { featureImages } from '../data/images';
+---
+<BaseLayout title="Über uns" description="RaumDesign Rudek: Malerfachbetrieb aus Düsseldorf mit Sinn für Gestaltung, Handwerkstechniken und ökologische Materialien.">
+  <section class="page-hero"><img src={featureImages.about} alt="Innenraumgestaltung von RaumDesign Rudek" /><div><p class="eyebrow">Über uns</p><h1>Gestaltung beginnt mit Zuhören.</h1><p>Wir möchten Sie mit einem ausgeprägten Sinn für Gestaltung, perfekter Ausführung fast vergessener Handwerkstechniken und ökologisch sinnvoller Materialien begeistern.</p></div></section>
+  <section class="text-columns"><article><h2>Kompetenz von A bis Z</h2><p>Ob Wand streichen, tapezieren, glatt spachteln oder eine individuelle Wand- und Deckenlösung entwickeln: RaumDesign Rudek ist Ihr Ansprechpartner für Wohnraum- und Wandgestaltung in Düsseldorf.</p></article><article><h2>Material mit Wirkung</h2><p>Mit Farbe, Kalkhaftputzen, Tapeten und besonderen Techniken entstehen Oberflächen, die Exklusivität und Wohngefühl verbinden.</p></article><article><h2>Anspruch an Ausführung</h2><p>Zuverlässigkeit, sauberes Arbeiten, Termintreue und geprüfte, gesunde Materialien sind keine Extras. Sie gehören zur Arbeit.</p></article></section>
+  <CTA />
+</BaseLayout>

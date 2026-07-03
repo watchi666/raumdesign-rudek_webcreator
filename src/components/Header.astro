@@ -1,0 +1,13 @@
+---
+import { nav, site } from '../data/site';
+const current = Astro.url.pathname;
+---
+<header class="site-header">
+  <a class="brand" href="/" aria-label="RaumDesign Rudek Startseite">
+    <span>RaumDesign</span><strong>Rudek</strong><small>Malerfachbetrieb</small>
+  </a>
+  <nav aria-label="Hauptnavigation">
+    {nav.map((item) => <a class={current === item.href ? 'active' : ''} href={item.href}>{item.label}</a>)}
+  </nav>
+  <a class="header-call" href={site.phoneHref}>Anrufen</a>
+</header>

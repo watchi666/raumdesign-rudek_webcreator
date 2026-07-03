@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import { services } from '../data/site';
+import { featureImages } from '../data/images';
+---
+<BaseLayout title="Leistungen" description="Malerarbeiten, kreative Wandgestaltung, Kalkputz, Marmorputz, Sanierung und Renovierung in Düsseldorf.">
+  <section class="page-hero compact"><img src={featureImages.serviceTwo} alt="Edeltechnik und Lasur von RaumDesign Rudek" /><div><p class="eyebrow">Unsere Leistungen</p><h1>Saubere Malerarbeit. Besondere Oberflächen.</h1><p>Wenn Sie genau wissen, was gemacht werden soll, führen wir es präzise aus. Wenn Sie noch unsicher sind, beraten wir Sie mit Gespür für Farbe, Raumwirkung und Material.</p></div></section>
+  <section class="service-list">{services.map((s, i) => <article><span>{String(i + 1).padStart(2, '0')}</span><h2>{s}</h2></article>)}</section>
+  <section class="split-section"><div class="split-copy"><p class="eyebrow">Service</p><h2>Renovierung ohne Reibungsverlust.</h2><p>Auf Wunsch übernehmen wir Aus- und Einräumen, schützen Möbel, Teppiche und Gardinen und planen auch Urlaubs-, Wochenend- oder Feiertagsrenovierungen für Büros, Praxen und Lokale.</p></div><div class="split-media"><img src={featureImages.serviceThree} alt="Detail einer RaumDesign Rudek Oberfläche" loading="lazy" /></div></section>
+  <CTA />
+</BaseLayout>

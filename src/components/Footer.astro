@@ -1,0 +1,8 @@
+---
+import { site } from '../data/site';
+---
+<footer class="site-footer">
+  <div><strong>RaumDesign Rudek</strong><p>Malerfachbetrieb für hochwertige Raum- und Wandgestaltung in Düsseldorf.</p></div>
+  <div><span>{site.address}</span><a href={site.phoneHref}>{site.phone}</a><a href={site.emailHref}>{site.email}</a></div>
+  <div class="footer-links"><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a><a href={site.facebook}>Facebook</a></div>
+</footer>
