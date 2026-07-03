@@ -25,3 +25,4 @@ pnpm-debug.log*
 
 # mirrored source html can contain third-party tokens
 original-site/html/
+.vercel
