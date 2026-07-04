@@ -1,5 +1,4 @@
 export const galleryImages = [
-  '4aabedac-e34f-4d21-bbd4-e9bec39d3ec7-1920w.jpg',
   '4aabedac-e34f-4d21-bbd4-e9bec39d3ec7-2880w.jpg',
   'Glittzerputz-mit-Lasuren-1920w.JPG',
   'HQZN6305-1920w.JPG',
@@ -26,7 +25,6 @@ export const galleryImages = [
   'P1010496-2880w.JPG',
   'P1020429-1920w.JPG',
   'Stuhhi-mit-Lasuren-077aab10-1920w.JPG',
-  'b9359d1a-3752-4881-9dc6-c2a8050fdbb2-1920w.jpg',
   'b9359d1a-3752-4881-9dc6-c2a8050fdbb2-2880w.jpg',
   'cache_2476171584-1920w.JPG',
   'p_wohnen1-1920w.jpg',

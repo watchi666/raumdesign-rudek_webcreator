@@ -4,8 +4,18 @@ import { site } from '../data/site';
 ---
 <BaseLayout title="Kontakt" description="Kontakt zu RaumDesign Rudek in Düsseldorf: Telefon, Adresse, Öffnungszeiten und Anfrageformular.">
   <section class="contact-page">
-    <div class="contact-card main"><p class="eyebrow">Kontakt</p><h1>Direkt sprechen ist meistens der schnellste Weg.</h1><p>Beschreiben Sie kurz Ihr Vorhaben oder rufen Sie direkt an. Für Beratung, Musterflächen, Renovierung und kreative Wandgestaltung.</p><a class="btn primary" href={site.phoneHref}>{site.phone}</a></div>
+    <div class="contact-card main"><h1>Direkt sprechen ist meistens der schnellste Weg.</h1><p>Beschreiben Sie kurz Ihr Vorhaben oder rufen Sie direkt an. Für Beratung, Musterflächen, Renovierung und kreative Wandgestaltung.</p><a class="btn primary" href={site.phoneHref}>{site.phone}</a></div>
     <div class="contact-card"><h2>Hier finden Sie uns</h2><p>{site.address}</p><p><strong>Telefon:</strong> <a href={site.phoneHref}>{site.phone}</a></p><p><strong>E-Mail:</strong> <a href={site.emailHref}>{site.email}</a></p><p><strong>Öffnungszeiten:</strong><br/>Mo–Do 8:00–18:00<br/>Freitag 8:00–14:00<br/>Sa–So geschlossen</p></div>
-    <form class="contact-form" action={site.emailHref} method="post" enctype="text/plain"><h2>Ihre Nachricht an uns</h2><label for="name">Name</label><input id="name" name="Name" autocomplete="name" required /><label for="email">E-Mail-Adresse</label><input id="email" name="E-Mail" type="email" autocomplete="email" required /><label for="phone">Telefon</label><input id="phone" name="Telefon" autocomplete="tel" /><label for="message">Nachricht</label><textarea id="message" name="Nachricht" rows="6" required></textarea><button class="btn primary" type="submit">Nachricht vorbereiten</button></form>
+    <form id="kontaktformular" class="contact-form" action={site.emailHref} method="post" enctype="text/plain" data-email={site.email}>
+      <h2>Ihre Nachricht an uns</h2>
+      <label for="name">Name</label><input id="name" name="Name" autocomplete="name" required />
+      <label for="email">E-Mail-Adresse</label><input id="email" name="E-Mail" type="email" autocomplete="email" required />
+      <label for="phone">Telefon</label><input id="phone" name="Telefon" autocomplete="tel" />
+      <label for="message">Nachricht</label><textarea id="message" name="Nachricht" rows="6" maxlength="1500" required></textarea>
+      <p class="zaehler"><span id="zeichen-stand">0</span> / 1500</p>
+      <button class="btn primary" type="submit">Nachricht senden</button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
   </section>
+  <script src="../scripts/contact-form.js"></script>
 </BaseLayout>
